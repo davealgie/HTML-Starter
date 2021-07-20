@@ -1,0 +1,74 @@
+<!-- emmett -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practice</title>
+ <style>
+     input:focus {
+     background-color: lightblue;
+ }
+ </style>
+</head>
+    <body>
+    <h1>Forms</h1>
+
+    <h2>No Labels</h2>
+
+    <form action="" method="POST">
+
+        Name:
+        <input type="text" name="name" id="name" placeholder="Bob Smith" required>
+
+        Password:
+        <input type="password" name="password" value="*****">
+
+        Age:
+        <input type="number" name="age" min="18" max="67">
+
+        Birthday:
+        <input type="date" name="birthday" >
+
+        <button type="submit"> Submit </button>
+        <button type="reset">Reset</button>
+        <button type="button">Does nothing</button>
+        
+    </form>    
+
+    <h2>With Labels</h2>
+
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Bob Smith" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" value="*****">
+
+        <button type="submit"> Submit </button>
+    </form>
+    <br/>
+    <form action="" method="POST">
+        <fieldset>
+
+                <legend>Input Basic Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <br/>
+                <label for="email">Email:</label>
+                <input type="email" name="email">
+                <br/>
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <br/>
+                <label for="Gender">Gender:</label>
+                <br/>
+                <input type="radio" id="m_gender" name="Gender" value="m_Gender"> <label for="m_gender">Male</label>
+                <br/>
+                <input type="radio" id="f_gender" name="Gender" value="m_Gender"><label for="f_gender">Female</label>
+                <br/>
+        </fieldset>
+        <button type="submit"> Sign Up </button>
+    </form>
+</body>
+</html>

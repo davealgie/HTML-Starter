@@ -1,0 +1,75 @@
+<!-- emmett -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+
+
+        .rel-container{
+            width: 800px;
+            height: 50px;
+            background-color: rgb(197, 76, 31);
+            position: relative;
+        }
+
+        .absolute{
+            position: absolute;
+            right: 10px;
+        }
+
+        .relative{
+            position: relative;
+        }
+
+        .fixed{
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            z-index: 1; /* puts element on top of elements with a lower z-index */
+        }
+
+        .zindex{
+            position: absolute;
+            bottom: 10px;
+            left: 69%;
+            right: 21%;
+            width: 30px;
+            height: 30px;
+        }
+
+        #d1{
+            background-color: red;
+            z-index: 3;
+        }
+
+        #d2{
+            background-color: blue;
+            z-index: 2;
+        }
+
+        #d3{
+            background-color: green;
+            z-index: 1;
+        }
+</style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div>
+        <p class="relative">Relatively Positioned</p>
+    </div>
+    <div class ="rel-container">
+        <p class ="absolute">Absolute Positioning</p>
+    </div>
+<div>
+    <div class="zindex" id="d1"></div>
+    <div class="zindex" id="d2"></div>
+    <div class="zindex" id="d3"></div>
+</div>
+    
+</body>
+</html>
