@@ -32,8 +32,10 @@ for (const element of myOtherNums){
 
 let d =["Hello","Everybody"];
 console.log( `${d.length}`);
+
 d.push("yo");
 console.log( `${d.length}`);
+
 console.log(d.shift());
 
 for (let i = 0; i < d.length; i++) {
