@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div id="container"></div>
+
+    <script>
+        let x = 10;
+        let y = 20;
+
+        console.log(`x + y = ${x + y}`);
+        console.warn("Warning!")
+        let myCar = "Audi";
+        let myModel = "A5";
+        console.log("my fav car is: " + myCar + " and the model is: " + myModel);
+        console.log("%c This is now the end of the exercises.","color: red;font-family:fantasy; font-style: Bold; background-color: black;padding: 10px");
+        console.log("This is now %c the end of the exercises.","color: orange;font-family:fantasy; font-style: Bold; background-color: black;padding: 10px");
+        
+    </script>
+    <script>
+                // selecting an element by id
+        // - query selector can take any type of selector :)
+        let containerElement = document.querySelector("#container");
+
+        // styling the selected element using its style attribute
+        // - hyphenated CSS properties get replaced with camelCase
+        containerElement.style.width = "100px";
+        containerElement.style.height = "100px";
+        containerElement.style.backgroundColor = "red";
+
+        console.log(containerElement);
+
+        // creating a new element in js
+        // - we are programmatically creating an element
+        let leadElement = document.createElement("p");
+        let junkElement = document.createElement("p");
+        leadElement.textContent = "Hello world, this is a lead :D";
+        junkElement.textContent = "Junk";
+
+        // appending the new element as a child of the container
+        containerElement.appendChild(leadElement);
+
+        // append and remove the child
+        containerElement.appendChild(junkElement);
+        containerElement.removeChild(junkElement);
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
