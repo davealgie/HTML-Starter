@@ -6,12 +6,7 @@
         // GET request
         fetch(`https://jsonplaceholder.typicode.com/posts`)
             .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                let element = document.createElement("p");
-                element.innerText = data[0].title;
-                container.appendChild(element);
-            }) 
+            .then(data => console.log(data)) // chained so we can handle the js object
             .catch(error => console.error(error))
             .finally(() => { console.log("All done"); });
     }
@@ -20,19 +15,14 @@
         // GET request
         fetch(`https://pokeapi.co/api/v2/pokemon`)
             .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                let element = document.createElement("p");
-                element.innerText = data[0].title;
-                container.appendChild(element);
-            }) 
+            .then(data => console.log(data)) // chained so we can handle the js object
             .catch(error => console.error(error))
             .finally(() => { console.log("All done"); });
     }
 
     simpleFetch();
     simpleFetch2();
-    
+
     function fetchPost(id) {
         // provide a target url
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -123,8 +113,16 @@
         this.userId = userId;
     }
 
-    // fetchPost(1);
-    // createPost(new Post("Test", "A description", 3));
+   // fetchPost(1);
+   //  createPost(new Post("Test", "A description", 3));
     // updatePost(new Post("Test", "Test description", 43), 1);
     // deletePost(1);
+    let fetchBtn = document.querySelector(`#fetchBtn`);
+    let simpleBtn = document.querySelector(`#simpleBtn`);
+
+    simpleBtn.addEventListener("click", () => {
+        fetchPost(3);
+    }, false);
+     fetchBtn.addEventListener("click", simpleFetch, false);
+
 })();
