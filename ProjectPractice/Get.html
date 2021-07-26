@@ -17,7 +17,14 @@
         </nav>
     </header>
     <h1>Get Requests</h1>
-
-    <script src = "js/app.js"></script>
+    <div id="form">
+        <form action="">
+            <label for="id">ID to get (leave empty for all results)</label>
+            <input name="id" type="number" value="" id="id"/>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+    <div id="resultTable"></div>
+    <script src = "js/get.js"></script>
 </body>
 </html>
